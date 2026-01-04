@@ -103,7 +103,7 @@ async function login(e) {
         // 7: Fetch Role From Supabase
 
         const { data: userData, error: dbError } = await supabase
-            .from('0- Js_Hackathon_Users')
+            .from('1.Users')
             .select('role')
             .eq('email', email)
             .single();
@@ -117,7 +117,7 @@ async function login(e) {
         if (userData.role === 'admin') {
             showAlert("Welcome Admin!", "Redirecting to Dashboard...", "success")
                 .then(() => {
-                    location.href = "../dashboard.html";
+                    location.href = "../AdminFiles/dashboard.html";
                 });
 
             // 9: else Gona Home

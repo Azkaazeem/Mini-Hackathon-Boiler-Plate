@@ -137,7 +137,7 @@ async function signUp(e) {
 
                 async () => {
                     const { error } = await supabase
-                        .from("0- Js_Hackathon_Users")
+                        .from("1.Users")
                         .insert({
                             username: sUName.value,
                             email: sEmail.value,
