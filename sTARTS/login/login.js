@@ -114,18 +114,11 @@ async function login(e) {
 
         // 8: If role Equal to Admin Gona Dashboard
 
-        if (userData.role === 'admin') {
-            showAlert("Welcome Admin!", "Redirecting to Dashboard...", "success")
-                .then(() => {
-                    location.href = "../AdminFiles/dashboard.html";
-                });
-
-            // 9: else Gona Home
-
+        if (!userData) {
         } else {
             showAlert("Login Success!", "Redirecting to Home...", "success")
                 .then(() => {
-                    location.href = "../UsersFiles/home.html";
+                    location.href = "../home.html";
                 });
         }
 

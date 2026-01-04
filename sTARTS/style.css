@@ -232,3 +232,109 @@ h1 {
     backdrop-filter: blur(12px);
     border-radius: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================================   HOME PAGE STYLING   ===================================================================== */
+
+/* GLOBAL SETTINGS */
+:root {
+    --primary: #4f46e5; /* Professional Indigo */
+    --primary-hover: #4338ca;
+    --bg-color: #f8fafc; /* Very light cool grey */
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+/* BUTTONS */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* CARD STYLING */
+.post-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.card-img-wrap {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Image ko stretch hone se bachata hai */
+    transition: transform 0.5s ease;
+}
+
+.post-card:hover .card-img-top {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* TYPOGRAPHY TWEAKS */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* FORM STYLING */
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid var(--primary);
+    background-color: #fff !important;
+}
